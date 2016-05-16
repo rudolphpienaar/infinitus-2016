@@ -9,45 +9,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-styles/typography.html">
 
-<dom-module id="my-greeting">
+<dom-module id="inf-live">
   <template>
-    <style include="shared-styles">
+    <style>
       :host {
         display: block;
       }
 
-      span,
-      input {
-        @apply(--paper-font-body2);
-      }
     </style>
+    <div>
 
-      <h1>Infinitus 2016 live website</h1>
+    <a class="twitter-timeline"  href="https://twitter.com/testInfinitus" data-widget-id="730846751100440577">Tweets by @testInfinitus</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-      <p>
-        This site will provide live updates to Infinitus 2016 as it happens... photos, tweets, results. It's all here. Check back often for the latest updates and important announcements.
-      </p>
 
+    </div>
 
   </template>
-
   <script>
-    (function() {
-      'use strict';
+  (function() {
+    'use strict';
 
-      Polymer({
-        is: 'my-greeting',
+    Polymer({
+      is: 'inf-live',
 
-        properties: {
-          greeting: {
-            type: String,
-            value: 'Welcome!',
-            notify: true
-          }
+      properties: {
+        foo: {
+          type: String,
+          value: 'inf-live',
+          notify: true
         }
-      });
-    })();
+      }
+    });
+  })();
   </script>
 </dom-module>

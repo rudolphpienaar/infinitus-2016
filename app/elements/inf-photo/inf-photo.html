@@ -1,0 +1,142 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="inf-photo">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .pics {
+        width:  800px;
+      }
+
+      .container {
+        position: relative;
+        height: 900px;
+        width: 960px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+
+      .container a {
+        float: left;
+        margin: 5px;
+      }
+
+      .thumb {
+        width: 100px;
+      }
+
+      .big {
+        position: absolute;
+        top: 900px;
+        left: 20px;
+        width: 800px;
+
+        -webkit-transition: top 1s ease;
+        -moz-transition: top 1s ease;
+        -o-transition: top 1s ease;
+        -ms-transition: top 1s ease;
+        transition: top 1s ease;
+
+      }
+
+      .featured {
+        top: 260px;
+        left: 20px;
+        z-index: -10;
+      }
+
+      a:hover .thumb {
+        -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+      }
+
+      a:hover .big {
+        top: 0px;
+      }
+
+    </style>
+    <!--<div>Hello from <span>{{foo}}</span></div>-->
+    <div>Hover over a thumbnail below...</div>
+    <div class="container">
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test1-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test1.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test2-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test2.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test1-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test1.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test2-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test2.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test1-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test1.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test2-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test2.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test1-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test1.jpg">
+      </a>
+
+      <a>
+        <img class="thumb"  src="../../images/misc/runner-test2-tn.jpg">
+        <img class="big"    src="../../images/misc/runner-test2.jpg">
+      </a>
+
+
+      <a href="#">
+        <img class="big featured" src="../../images/misc/featured.jpg">
+      </a>
+
+    </div>
+
+
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'inf-photo',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'inf-photo',
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>
